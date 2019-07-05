@@ -1,0 +1,427 @@
+{
+	"info": {
+		"_postman_id": "75de4b0d-cf84-4ede-b38a-92d1c434bf8d",
+		"name": "corpus",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "signin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNTUwOTk4MjQwLCJleHAiOjE1NTEwMTk4NDB9.SCha6HVu65NRBFzwSZ9Ilv-viP5UHVy6TE4RK-Jt_QnnYEBsnhxtlZYw-xWBFeywkKjwuwhs8kBql8PihAkmDA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"password\": \"123456\", \"usernameOrEmail\": \"test@gmail.com\"}\""
+				},
+				"url": {
+					"raw": "http://localhost:8083/api/v1/auth/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signup",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNTUwOTk4MjQwLCJleHAiOjE1NTEwMTk4NDB9.SCha6HVu65NRBFzwSZ9Ilv-viP5UHVy6TE4RK-Jt_QnnYEBsnhxtlZYw-xWBFeywkKjwuwhs8kBql8PihAkmDA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"test@gmail.com\",\n  \"firstName\": \"Sinan\",\n  \"lastName\": \"BALCIN\",\n  \"password\": \"123456\",\n  \"username\": \"sbalcin\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8083/api/v1/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createBook",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNTYyMjkwODQxLCJleHAiOjE1NjIyOTQ0NDF9.9orukd25uepcNDSG7Kbg6_1wY29clzNig9MZuHWAesq8DCsQ1wK1iBhCPt37-brbmN2kEjo14I5MnIXDSFxAfg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"author\": \"Mark Wickham\",\n  \"name\": \"Practical Java Machine Learning\",\n  \"price\": 7.99,\n  \"publish\": \"2016-07-05T00:33:15.399Z\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8083/api/v1/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"v1",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateBook",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNTYyMjg4MDkxLCJleHAiOjE1NjIyOTE2OTF9.RhR1WvrmqpJOK0YJN3fBNw_iPEW8fmOPmEZ18iEh3I1XqdsoHxuGtFr87v7pRD0ZdDCExHhmZBLUiP27NwBBdQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"author\": \"Mark Wickham\",\n  \"name\": \"Practical Java Machine Learning\",\n  \"price\": 7.99,\n  \"publish\": \"2016-07-05T00:33:15.399Z\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8083/api/v1/books/18",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"v1",
+						"books",
+						"18"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteBook",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNTYyMjg4MDkxLCJleHAiOjE1NjIyOTE2OTF9.RhR1WvrmqpJOK0YJN3fBNw_iPEW8fmOPmEZ18iEh3I1XqdsoHxuGtFr87v7pRD0ZdDCExHhmZBLUiP27NwBBdQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"author\": \"Mark Wickham 02\",\n  \"name\": \"Practical Java Machine Learning\",\n  \"price\": 7.99,\n  \"publish\": \"2016-07-05T00:33:15.399Z\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8083/api/v1/books/15",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"v1",
+						"books",
+						"15"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllBooks",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNTUxMTkxMDk1LCJleHAiOjE1NTEyMTI2OTV9.iT_Be-CSMB72vQk22x9gsHzHsv2P-W2TQDPKe5yzpeiinzclOrvF4vI7YzJ2OFat0VoOH_vlQQ4pd16GQc6tGw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8083/api/v1/books/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"v1",
+						"books",
+						""
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getBookById",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNTUxMTkxMDk1LCJleHAiOjE1NTEyMTI2OTV9.iT_Be-CSMB72vQk22x9gsHzHsv2P-W2TQDPKe5yzpeiinzclOrvF4vI7YzJ2OFat0VoOH_vlQQ4pd16GQc6tGw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8083/api/v1/books/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"v1",
+						"books",
+						"1"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getBookByAuthor",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNTUxMTkxMDk1LCJleHAiOjE1NTEyMTI2OTV9.iT_Be-CSMB72vQk22x9gsHzHsv2P-W2TQDPKe5yzpeiinzclOrvF4vI7YzJ2OFat0VoOH_vlQQ4pd16GQc6tGw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8083/api/v1/books/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"v1",
+						"books",
+						"1"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getBookByPriceRange",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNTUxMTkxMDk1LCJleHAiOjE1NTEyMTI2OTV9.iT_Be-CSMB72vQk22x9gsHzHsv2P-W2TQDPKe5yzpeiinzclOrvF4vI7YzJ2OFat0VoOH_vlQQ4pd16GQc6tGw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8083/api/v1/books/price?minPrice=5&maxPrice=9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"v1",
+						"books",
+						"price"
+					],
+					"query": [
+						{
+							"key": "minPrice",
+							"value": "5"
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "maxPrice",
+							"value": "9"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
